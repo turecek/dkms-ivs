@@ -17,5 +17,17 @@ namespace MathLibNS
             return result;
         }
 
+        public static double Multiply (double a, double b)
+        {
+            // zde bude kod k funkci multiply
+            return result;
+        }
+
+        public static double Divide (double a, double b)
+        {
+            // zde bude kod k funkci divide
+            // vraci a / b
+            return result;
+        }
     }
 }
