@@ -68,6 +68,57 @@ namespace MathTestNS
 		// assert is handled by ExpectedException
 		}
 
+		// DecToBin
+		// Tests if DecToBin method returns valid results
+		[TestMethod]
+		public void DecToBin_Test()
+		{
+			// arange
+			int input1 = 845;
+			int input2 = 102;
+			int input3 = 40;
+			int input4 = 40076;
+			int input5 = 21;
+			int input6 = 0;
+
+			long expected1 = 1101001101;
+			long expected2 = 1100110;
+			long expected3 = 101000;
+			long expected4 = 1001110010001100;
+			long expected5 = 10101;
+			long expected6 = 0;
+
+			// act
+			long result1 = MathLib.DecToBin(input1);
+			long result2 = MathLib.DecToBin(input2);
+			long result3 = MathLib.DecToBin(input3);
+			long result4 = MathLib.DecToBin(input4);
+			long result5 = MathLib.DecToBin(input5);
+			long result6 = MathLib.DecToBin(input6);
+			// assert
+			Assert.AreEqual(expected1, result1, 0, "Wrong output for DecToBin(845)");
+			Assert.AreEqual(expected2, result2, 0, "Wrong output for DecToBin(102)");
+			Assert.AreEqual(expected3, result3, 0, "Wrong output for DecToBin(40)");
+			Assert.AreEqual(expected4, result4, 0, "Wrong output for DecToBin(40076)");
+			Assert.AreEqual(expected5, result5, 0, "Wrong output for DecToBin(21)");
+			Assert.AreEqual(expected6, result6, 0, "Wrong output for DecToBin(0)");
+		}
+
+		// Tests if DecToBin method throws an exception is argument is less then zero
+		[TestMethod]
+		[ExpectedException(typeof(ArgumentOutOfRangeException))]
+		public void DecToBin_InputLessThenZero_ShouldThrowArgumentOutOfRange()
+		{
+			// arrange
+			int input1 = -11;
+			int input2 = -3;
+
+			// act
+			long result1 = MathLib.DecToBin(input1);
+			long result2 = MathLib.DecToBin(input2);
+
+			// assert is handled by ExpectedException
+		}
 
 	}
 

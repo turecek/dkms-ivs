@@ -12,5 +12,12 @@ namespace MathLibNS
             return 0;
         }
 
+        public static long DecToBin(int a)
+        {
+            // zde bude kod funkce decToBin
+            // vraci a to bin
+            return 0;
+        }
+
     }
 }
