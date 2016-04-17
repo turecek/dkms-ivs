@@ -72,7 +72,7 @@ namespace MathTestNS
             Assert.AreEqual(expected3, result3, 1E-10, "Wrong output in Minus method.");
             Assert.AreEqual(expected4, result4, 1E-10, "Wrong output in Minus method.");
         }
-        	
+
         // MULTIPLY
         // Tests if Multiply method returns valid results
         [TestMethod]
@@ -150,6 +150,51 @@ namespace MathTestNS
 
             // act
             double result = MathLib.Divide(input1a, input1b);
+
+            // assert is handled by ExpectedException
+        }
+
+        // FACTORIAL
+        // Tests if Factorial method returns valid results
+        [TestMethod]
+        public void Factorial_ValidInputs()
+        {
+            // arrange
+            int input1 = 0;
+            int input2 = 1;
+            int input3 = 4;
+            int input4 = 10;
+
+            int expected1 = 1;
+            int expected2 = 1;
+            int expected3 = 24;
+            int expected4 = 3628800;
+
+            // act
+            int result1 = MathLib.Factorial(input1);
+            int result2 = MathLib.Factorial(input2);
+            int result3 = MathLib.Factorial(input3);
+            int result4 = MathLib.Factorial(input4);
+
+            // assert
+            Assert.AreEqual(expected1, result1, 0, "Wrong output for 0 factorial");
+            Assert.AreEqual(expected2, result2, 0, "Wrong output for 1 factorial");
+            Assert.AreEqual(expected3, result3, 0, "Wrong output for 4 factorial");
+            Assert.AreEqual(expected4, result4, 0, "Wrong output for 10 factorial");
+        }
+
+        // Tests if factorial method throws an exception for input less than zero
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Factorial_InputLessThanZero_ShouldThrowArgumentOutOfRange()
+        {
+            // arrange
+            int input1 = -42;
+            int input2 = -1;
+
+            // act
+            int result1 = MathLib.Factorial(input1);
+            int result2 = MathLib.Factorial(input2);
 
             // assert is handled by ExpectedException
         }

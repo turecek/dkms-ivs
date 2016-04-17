@@ -29,5 +29,12 @@ namespace MathLibNS
             // vraci a / b
             return result;
         }
+
+        public static int Factorial (int input)
+        {
+            // zde bude kod k faktorialu
+
+            return result;
+        }
     }
 }
