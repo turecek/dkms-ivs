@@ -1,0 +1,7 @@
+D:\Skola\2sem\IVS\projekt2\Calc\MathLibTest\bin\Debug\MathLibTest.dll
+D:\Skola\2sem\IVS\projekt2\Calc\MathLibTest\bin\Debug\MathLibTest.pdb
+D:\Skola\2sem\IVS\projekt2\Calc\MathLibTest\bin\Debug\MathLib.dll
+D:\Skola\2sem\IVS\projekt2\Calc\MathLibTest\bin\Debug\MathLib.pdb
+D:\Skola\2sem\IVS\projekt2\Calc\MathLibTest\obj\Debug\MathLibTest.csprojResolveAssemblyReference.cache
+D:\Skola\2sem\IVS\projekt2\Calc\MathLibTest\obj\Debug\MathLibTest.dll
+D:\Skola\2sem\IVS\projekt2\Calc\MathLibTest\obj\Debug\MathLibTest.pdb
