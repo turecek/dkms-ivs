@@ -1,53 +1,95 @@
-﻿using System;
+using System;
 
 namespace MathLibNS
 {
     public class MathLib
     {
-        public static double Plus (double a, double b)
+        // Function Plus adds up two arguments.
+        public static double Plus(double a, double b)
         {
-            // zde bude kod k funkci plus
+            double result = a + b;
             return result;
         }
 
-        public static double Minus (double a, double b)
+        // Function Minus subtracts argument b from argument a.
+        public static double Minus(double a, double b)
         {
-            // zde bude kod k funkci minus
-            // vraci a - b
+            double result = a - b;
             return result;
         }
 
-        public static double Multiply (double a, double b)
+        // Function Multiply multiplies two arguments.
+        public static double Multiply(double a, double b)
         {
-            // zde bude kod k funkci multiply
+            double result = a * b;
             return result;
         }
 
-        public static double Divide (double a, double b)
+        // Function Divide divides argument a by argument b.
+        public static double Divide(double a, double b)
         {
-            // zde bude kod k funkci divide
-            // vraci a / b
+            if (b == 0)
+            {
+                throw new Exception("Divide by zero.");
+            }
+            double result = a / b;
             return result;
         }
 
-        public static int Factorial (int input)
+        // Function Factorial returns factorial of input.
+        public static int Factorial(int input)
         {
-            // zde bude kod k faktorialu
+            if (input < 0)
+            {
+                throw new ArgumentOutOfRangeException("Input is less than zero.");
+            }
+
+            int result = 1;
+
+            for (int i = input; i > 0; i--)
+            {
+                result = result * i;
+            }
 
             return result;
+
         }
+
+        // Function Pow counts argument a raised to the power b.
         public static double Pow(double a, int b)
         {
-            // zde bude kod funkce pow
-            // vraci a^b
-            return 0;
+            if (b <= 0)
+            {
+                throw new ArgumentOutOfRangeException("Exponent is less or equal zero.");
+            }
+            double result = 1;
+
+            for (int i = b; i > 0; i--)
+            {
+                result = result * a;
+            }
+
+            return result;
         }
 
+        // Function DecToBin converts decimal argument a to binary result.
         public static long DecToBin(int a)
         {
-            // zde bude kod funkce decToBin
-            // vraci a to bin
-            return 0;
+            if (a < 0)
+            {
+                throw new ArgumentOutOfRangeException("Decimal number is less than zero.");
+            }
+
+            int cipher;
+            string result = "";
+            while (a > 0)
+            {
+                cipher = a % 2;
+                result = cipher.ToString() + result;
+                a = a / 2;
+            }
+            result = "0" + result;
+            return long.Parse(result);
         }
     }
 }
