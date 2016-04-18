@@ -1,0 +1,11 @@
+D:\Skola\2sem\IVS\projekt2\Calc\Calc\bin\Debug\Calc.exe.config
+D:\Skola\2sem\IVS\projekt2\Calc\Calc\bin\Debug\Calc.exe
+D:\Skola\2sem\IVS\projekt2\Calc\Calc\bin\Debug\Calc.pdb
+D:\Skola\2sem\IVS\projekt2\Calc\Calc\bin\Debug\MathLib.dll
+D:\Skola\2sem\IVS\projekt2\Calc\Calc\bin\Debug\MathLib.pdb
+D:\Skola\2sem\IVS\projekt2\Calc\Calc\obj\Debug\Calc.csprojResolveAssemblyReference.cache
+D:\Skola\2sem\IVS\projekt2\Calc\Calc\obj\Debug\Calc.CalcForm.resources
+D:\Skola\2sem\IVS\projekt2\Calc\Calc\obj\Debug\Calc.Properties.Resources.resources
+D:\Skola\2sem\IVS\projekt2\Calc\Calc\obj\Debug\Calc.csproj.GenerateResource.Cache
+D:\Skola\2sem\IVS\projekt2\Calc\Calc\obj\Debug\Calc.exe
+D:\Skola\2sem\IVS\projekt2\Calc\Calc\obj\Debug\Calc.pdb
