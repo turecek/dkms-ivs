@@ -39,16 +39,22 @@ namespace MathLibNS
         // Function Factorial returns factorial of input.
         public static int Factorial(int input)
         {
+            int result = 1;
+            int tmp = 1;
+
             if (input < 0)
             {
                 throw new ArgumentOutOfRangeException("Input is less than zero.");
             }
 
-            int result = 1;
-
             for (int i = input; i > 0; i--)
             {
-                result = result * i;
+                 tmp = result;
+                 result = result * i;
+                 if (tmp > result)
+                {
+                    throw new OverflowException("Result is out of range.");
+                }
             }
 
             return result;
@@ -81,15 +87,23 @@ namespace MathLibNS
             }
 
             int cipher;
-            string result = "";
+            string value = "";
             while (a > 0)
             {
                 cipher = a % 2;
-                result = cipher.ToString() + result;
+                value = cipher.ToString() + value;
                 a = a / 2;
             }
-            result = "0" + result;
-            return long.Parse(result);
+            value = "0" + value;
+            long result;
+            if (!long.TryParse(value, out result))
+            {
+                throw new OverflowException("Binary number is out of range.");
+            }
+            else
+            {
+                return result;
+            }
         }
     }
 }

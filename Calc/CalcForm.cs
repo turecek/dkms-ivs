@@ -21,6 +21,18 @@ namespace Calc
         string lastOp = "";
         // When bool op is true, textbox1 will clear after next numbered button is pressed
         bool op = false;
+        // When there is an error message in textbox1, bool error is true
+        bool error = false;
+
+        public CalcForm()
+        {
+            InitializeComponent();
+        }
+
+        private void CalcForm_Load(object sender, EventArgs e)
+        {
+
+        }
 
         // Method calls functions from MathLib depending on which operator was used
         public void LastOperation(double a, double b)
@@ -45,12 +57,15 @@ namespace Calc
                     break;
                 case "pow":
                     int exponent;
-                    if (Int32.TryParse(b.ToString(), out exponent))
+                    if (!Int32.TryParse(b.ToString(), out exponent))
+                    {
+                        textBox1.Text = "Neplatny vstup";
+                        error = true;
+                    }
+                    else
                     {
                         result = MathLib.Pow(a, exponent);
                     }
-                    else
-                        textBox1.Text = "Neplatny vstup";
                     lastOp = "";
                     break;
             }
@@ -64,15 +79,23 @@ namespace Calc
                 lastOp = operation;
 
                 if (!Double.TryParse(textBox1.Text, out var1))
+                {
                     textBox1.Text = "Neplatny vstup";
+                    error = true;
+                }
                 else
+                {
                     op = true;
+                }
             }
 
             else
             {
                 if (!Double.TryParse(textBox1.Text, out var2))
+                {
                     textBox1.Text = "Neplatny vstup";
+                    error = true;
+                }
                 else
                 {
                     LastOperation(var1, var2);
@@ -84,57 +107,47 @@ namespace Calc
             }
         }
 
-        public CalcForm()
-        {
-            InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
         // DecToBin
-        private void button10_Click_1(object sender, EventArgs e)
+        private void DecToBin_Click(object sender, EventArgs e)
         {
             int res;
 
             if (lastOp == "")
             {
                 if (Int32.TryParse(textBox1.Text, out res))
+                {
                     textBox1.Text = MathLib.DecToBin(res).ToString();
+                }
                 else
+                {
                     textBox1.Text = "Neplatny vstup";
+                    error = true;
+                }
             }
 
             else
             {
                 if (!Double.TryParse(textBox1.Text, out var2))
+                {
                     textBox1.Text = "Neplatny vstup";
+                    error = true;
+                }
                 else
                 {
                     LastOperation(var1, var2);
                     if (Int32.TryParse(result.ToString(), out res))
                     {
                         textBox1.Text = MathLib.DecToBin(res).ToString();
-                        var1 = Double.Parse(textBox1.Text);
                     }
                     else
+                    {
                         textBox1.Text = "Neplatny vstup";
-                }
+                        error = true;
+                    }
+                 }
 
             }
             op = true;
-        }
-
-        private void CalcForm_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonPow_Click(object sender, EventArgs e)
@@ -149,25 +162,35 @@ namespace Calc
             if (lastOp == "")
             {
                 if (Int32.TryParse(textBox1.Text, out res))
+                {
                     textBox1.Text = MathLib.Factorial(res).ToString();
+                }
                 else
+                {
                     textBox1.Text = "Neplatny vstup";
+                    error = true;
+                }
             }
 
             else
             {
                 if (!Double.TryParse(textBox1.Text, out var2))
+                {
                     textBox1.Text = "Neplatny vstup";
+                    error = true;
+                }
                 else
                 {
                     LastOperation(var1, var2);
                     if (Int32.TryParse(result.ToString(), out res))
                     {
                         textBox1.Text = MathLib.Factorial(res).ToString();
-                        var1 = Double.Parse(textBox1.Text);
                     }
                     else
+                    {
                         textBox1.Text = "Neplatny vstup";
+                        error = true;
+                    }
                 }
 
             }
@@ -196,9 +219,8 @@ namespace Calc
 
         private void buttonClearEntry_Click(object sender, EventArgs e)
         {
-            var2 = 0;
-            result = 0;
             textBox1.Text = "0";
+            error = false;
             
         }
 
@@ -209,6 +231,7 @@ namespace Calc
             textBox1.Text = "0";
             op = false;
             lastOp = "";
+            error = false;
         }
 
         private void buttonEquals_Click(object sender, EventArgs e)
@@ -216,7 +239,10 @@ namespace Calc
             if (lastOp != "")
             {
                 if (!Double.TryParse(textBox1.Text, out var2))
+                {
                     textBox1.Text = "Neplatny vstup";
+                    error = true;
+                }
                 else
                 {
                     LastOperation(var1, var2);
@@ -226,6 +252,88 @@ namespace Calc
                 }
             }
             op = true;
+        }
+
+        private void NumberClick(string number)
+        {
+            if ((textBox1.Text == "0") || (error) || (op))
+            {
+                textBox1.Text = number;
+                error = false;
+                op = false;
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + number;
+            }
+        }
+
+        private void button0_Click(object sender, EventArgs e)
+        {
+            NumberClick("0");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NumberClick("1");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            NumberClick("2");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            NumberClick("3");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            NumberClick("4");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            NumberClick("5");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            NumberClick("6");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            NumberClick("7");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            NumberClick("8");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            NumberClick("9");
+        }
+
+        private void buttonDecPoint_Click(object sender, EventArgs e)
+        {
+            bool point = false;
+
+            foreach (char c in textBox1.Text)
+            {
+                if (c == ',')
+                {
+                    point = true;
+                }
+            }
+
+            if ((!point) && (!error) && (!op))
+            {
+                textBox1.Text = textBox1.Text + ",";
+            }
         }
     }
 }
