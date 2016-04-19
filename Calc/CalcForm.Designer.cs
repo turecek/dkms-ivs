@@ -173,6 +173,7 @@
             this.buttonEquals.TabIndex = 11;
             this.buttonEquals.Text = "=";
             this.buttonEquals.UseVisualStyleBackColor = true;
+            this.buttonEquals.Click += new System.EventHandler(this.buttonEquals_Click);
             // 
             // buttonPlus
             // 
@@ -183,6 +184,7 @@
             this.buttonPlus.TabIndex = 12;
             this.buttonPlus.Text = "+";
             this.buttonPlus.UseVisualStyleBackColor = true;
+            this.buttonPlus.Click += new System.EventHandler(this.buttonPlus_Click);
             // 
             // buttonMinus
             // 
@@ -193,6 +195,7 @@
             this.buttonMinus.TabIndex = 13;
             this.buttonMinus.Text = "-";
             this.buttonMinus.UseVisualStyleBackColor = true;
+            this.buttonMinus.Click += new System.EventHandler(this.buttonMinus_Click);
             // 
             // buttonMultiply
             // 
@@ -203,6 +206,7 @@
             this.buttonMultiply.TabIndex = 14;
             this.buttonMultiply.Text = "*";
             this.buttonMultiply.UseVisualStyleBackColor = true;
+            this.buttonMultiply.Click += new System.EventHandler(this.buttonMultiply_Click);
             // 
             // buttonDivide
             // 
@@ -213,6 +217,7 @@
             this.buttonDivide.TabIndex = 15;
             this.buttonDivide.Text = "/";
             this.buttonDivide.UseVisualStyleBackColor = true;
+            this.buttonDivide.Click += new System.EventHandler(this.buttonDivide_Click);
             // 
             // buttonClearEntry
             // 
@@ -223,6 +228,7 @@
             this.buttonClearEntry.TabIndex = 16;
             this.buttonClearEntry.Text = "CE";
             this.buttonClearEntry.UseVisualStyleBackColor = true;
+            this.buttonClearEntry.Click += new System.EventHandler(this.buttonClearEntry_Click);
             // 
             // buttonClearAll
             // 
@@ -233,6 +239,7 @@
             this.buttonClearAll.TabIndex = 17;
             this.buttonClearAll.Text = "C";
             this.buttonClearAll.UseVisualStyleBackColor = true;
+            this.buttonClearAll.Click += new System.EventHandler(this.buttonClearAll_Click);
             // 
             // buttonPow
             // 
@@ -254,6 +261,7 @@
             this.buttonFactorial.TabIndex = 19;
             this.buttonFactorial.Text = "n!";
             this.buttonFactorial.UseVisualStyleBackColor = true;
+            this.buttonFactorial.Click += new System.EventHandler(this.buttonFactorial_Click);
             // 
             // buttonDecToBin
             // 
