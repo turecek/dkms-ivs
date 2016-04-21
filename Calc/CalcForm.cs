@@ -52,7 +52,15 @@ namespace Calc
                     lastOp = "";
                     break;
                 case "divide":
-                    result = MathLib.Divide(a, b);
+                    try
+                    {
+                        result = MathLib.Divide(a, b);
+                    }
+                    catch(Exception)
+                    {
+                        textBox1.Text = "Nulou nelze delit.";
+                        error = true;
+                    }
                     lastOp = "";
                     break;
                 case "pow":
@@ -64,7 +72,15 @@ namespace Calc
                     }
                     else
                     {
-                        result = MathLib.Pow(a, exponent);
+                        try
+                        {
+                            result = MathLib.Pow(a, exponent);
+                        }
+                        catch(ArgumentOutOfRangeException)
+                        {
+                            textBox1.Text = "Zaporny exponent.";
+                            error = true;
+                        }
                     }
                     lastOp = "";
                     break;
@@ -99,10 +115,13 @@ namespace Calc
                 else
                 {
                     LastOperation(var1, var2);
-                    textBox1.Text = result.ToString();
-                    var1 = result;
-                    lastOp = operation;
-                    op = true;
+                    if (!error)
+                    {
+                        textBox1.Text = result.ToString();
+                        var1 = result;
+                        lastOp = operation;
+                        op = true;
+                    }
                 }
             }
         }
@@ -137,7 +156,19 @@ namespace Calc
                     LastOperation(var1, var2);
                     if (Int32.TryParse(result.ToString(), out res))
                     {
-                        textBox1.Text = MathLib.DecToBin(res).ToString();
+                        try
+                        {
+                            textBox1.Text = MathLib.DecToBin(res).ToString();
+                        }
+                        catch (OverflowException)
+                        {
+                            textBox1.Text = "Prilis velke cislo.";
+                        }
+                        catch (ArgumentOutOfRangeException)
+                        {
+                            textBox1.Text = "Zaporne cislo.";
+                        }
+
                     }
                     else
                     {
@@ -163,7 +194,18 @@ namespace Calc
             {
                 if (Int32.TryParse(textBox1.Text, out res))
                 {
-                    textBox1.Text = MathLib.Factorial(res).ToString();
+                    try
+                    {
+                        textBox1.Text = MathLib.Factorial(res).ToString();
+                    }
+                    catch(ArgumentOutOfRangeException)
+                    {
+                        textBox1.Text = "Faktorial neexistuje.";
+                    }
+                    catch(OverflowException)
+                    {
+                        textBox1.Text = "Prilis velke cislo.";
+                    }
                 }
                 else
                 {
@@ -246,9 +288,12 @@ namespace Calc
                 else
                 {
                     LastOperation(var1, var2);
-                    textBox1.Text = result.ToString();
-                    var1 = result;
-                    lastOp = "";
+                    if (!error)
+                    {
+                        textBox1.Text = result.ToString();
+                        var1 = result;
+                        lastOp = "";
+                    }
                 }
             }
             op = true;
