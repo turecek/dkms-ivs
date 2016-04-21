@@ -64,7 +64,7 @@ namespace MathLibNS
         // Function Pow counts argument a raised to the power b.
         public static double Pow(double a, int b)
         {
-            if (b <= 0)
+            if (b < 0)
             {
                 throw new ArgumentOutOfRangeException("Exponent is less or equal zero.");
             }
