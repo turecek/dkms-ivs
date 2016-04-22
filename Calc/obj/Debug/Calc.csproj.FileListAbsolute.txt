@@ -25,9 +25,20 @@ D:\Škola\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.exe
 D:\Škola\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.pdb
 D:\Škola\dkms-ivs-master\dkms-ivs-master\Calc\bin\Debug\Calc.exe
 D:\Škola\dkms-ivs-master\dkms-ivs-master\Calc\bin\Debug\Calc.pdb
-D:\Škola\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.CalcForm.resources
-D:\Škola\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.Properties.Resources.resources
-D:\Škola\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.csproj.GenerateResource.Cache
 D:\Škola\dkms-ivs-master\dkms-ivs-master\Calc\bin\Debug\MathLib.dll
 D:\Škola\dkms-ivs-master\dkms-ivs-master\Calc\bin\Debug\MathLib.pdb
 D:\Škola\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.csprojResolveAssemblyReference.cache
+D:\Škola\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.CalcForm.resources
+D:\Škola\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.Properties.Resources.resources
+D:\Škola\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.csproj.GenerateResource.Cache
+D:\Škola\FIT - prvák\IVS\dkms-ivs-master\dkms-ivs-master\Calc\bin\Debug\Calc.exe.config
+D:\Škola\FIT - prvák\IVS\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.exe
+D:\Škola\FIT - prvák\IVS\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.pdb
+D:\Škola\FIT - prvák\IVS\dkms-ivs-master\dkms-ivs-master\Calc\bin\Debug\Calc.exe
+D:\Škola\FIT - prvák\IVS\dkms-ivs-master\dkms-ivs-master\Calc\bin\Debug\Calc.pdb
+D:\Škola\FIT - prvák\IVS\dkms-ivs-master\dkms-ivs-master\Calc\bin\Debug\MathLib.dll
+D:\Škola\FIT - prvák\IVS\dkms-ivs-master\dkms-ivs-master\Calc\bin\Debug\MathLib.pdb
+D:\Škola\FIT - prvák\IVS\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.csprojResolveAssemblyReference.cache
+D:\Škola\FIT - prvák\IVS\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.CalcForm.resources
+D:\Škola\FIT - prvák\IVS\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.Properties.Resources.resources
+D:\Škola\FIT - prvák\IVS\dkms-ivs-master\dkms-ivs-master\Calc\obj\Debug\Calc.csproj.GenerateResource.Cache

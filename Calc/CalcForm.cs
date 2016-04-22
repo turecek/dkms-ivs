@@ -9,27 +9,46 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MathLibNS;
 
+/// 
+/// @file CalcForm.cs    
+/// @authors Dominik Tureček, Štěpán Vích, Monika Mužikovská, Katka Šmajzrová
+/// @brief Obsahuje funkce, které jsou navázány na eventy v GUI. Obsahuje i funkce zodpovědné za zobrazování výstupu kalkulačky a další pomocné funkce.
+/// @date Apr 2016
+/// @copyright GNU Public License. 
+///
+
+/// \defgroup guiFc GUI Class
+/// @brief Obsahuje funkce, které jsou navázány na eventy v GUI.
+
+
+/// Prostor jmen grafického prostředí.
 namespace Calc
 {
+
+    
+    /// Třída obsahující metody, které se vážou na eventy v GUI, vypočítávájí výsledek a zobrazují ho.
     public partial class CalcForm : Form
     {
-        // Variables used as paramethers for methods from MathLibNS
-        double var1;
-        double var2;
-        
-                
-        double result;
 
+
+        /// 
+        /// \addtogroup guiFc
+        /// @{
+        ///
+
+        // Variables used as paramethers in methods from MathLibNS
+        double var1; ///< Proměnná a předávaná jako parametr do matematické knihovny.
+        double var2; ///< Proměnná b předávaná jako parametr do matematické knihovny.       
+        double result; ///< Výsledek funkcí matematické knihovny.
         // String used for determining which operator was used
         string lastOp = "";
-
         // When bool op is true, textbox1 will clear after next numbered button is pressed
         bool op = false;
-
         // When there is an error message in textbox1, bool error is true
         bool error = false;
 
-        // Two initializing methods
+        /// @brief Konstruktor třídy
+        /// @return void
         public CalcForm()
         {
             InitializeComponent();
@@ -39,9 +58,12 @@ namespace Calc
         {
 
         }
-      
 
         // Method calls functions from MathLib depending on which operator was used
+        /// @brief Metoda volá funkce z matematické knihovny v závislosti na použitém operátoru.
+        /// @param[in] a Vstupní hodnota a
+        /// @param[in] b Vstupní hodnota b
+        /// @return void 
         public void LastOperation(double a, double b)
         {
             switch (lastOp)
@@ -59,8 +81,6 @@ namespace Calc
                     lastOp = "";
                     break;
                 case "divide":
-                    // Library throws an exception in case of dividing by zero, which
-                    // is handled in section catch
                     try
                     {
                         result = MathLib.Divide(a, b);
@@ -95,8 +115,10 @@ namespace Calc
                     break;
             }
         }
-
-        // Method calling particular library method according to pressed operation button 
+        
+        // Method handling pressing of an operator button
+        /// @brief Metoda spouštěná po zmáčknutí čudlíku v GUI.
+        /// @return void
         public void ButtonClick(string operation)
         {
             if (lastOp == "")
@@ -196,13 +218,13 @@ namespace Calc
                         textBox1.Text = "Neplatny vstup";
                         error = true;
                     }
-                 }
+                }
 
             }
             op = true;
         }
 
-        // Method handling pressing of a Power button 
+        // Method handling pressing of a Power button
         private void buttonPow_Click(object sender, EventArgs e)
         {
             ButtonClick("pow");
@@ -222,11 +244,11 @@ namespace Calc
                     {
                         textBox1.Text = MathLib.Factorial(res).ToString();
                     }
-                    catch(ArgumentOutOfRangeException)
+                    catch (ArgumentOutOfRangeException)
                     {
                         textBox1.Text = "Faktorial neexistuje.";
                     }
-                    catch(OverflowException)
+                    catch (OverflowException)
                     {
                         textBox1.Text = "Prilis velke cislo.";
                     }
@@ -434,5 +456,8 @@ namespace Calc
                 textBox1.Text = textBox1.Text + ",";
             }
         }
+        /// 
+        /// @} Konec guiFc */
+        ///         
     }
 }
