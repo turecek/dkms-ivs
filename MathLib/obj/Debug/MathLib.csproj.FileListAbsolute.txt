@@ -1,0 +1,10 @@
+D:\Skola\2sem\IVS\projekt2\Calc\MathLib\bin\Debug\MathLib.dll
+D:\Skola\2sem\IVS\projekt2\Calc\MathLib\bin\Debug\MathLib.pdb
+D:\Skola\2sem\IVS\projekt2\Calc\MathLib\obj\Debug\MathLib.csprojResolveAssemblyReference.cache
+D:\Skola\2sem\IVS\projekt2\Calc\MathLib\obj\Debug\MathLib.dll
+D:\Skola\2sem\IVS\projekt2\Calc\MathLib\obj\Debug\MathLib.pdb
+D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLib\bin\Debug\MathLib.dll
+D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLib\bin\Debug\MathLib.pdb
+D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLib\obj\Debug\MathLib.csprojResolveAssemblyReference.cache
+D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLib\obj\Debug\MathLib.dll
+D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLib\obj\Debug\MathLib.pdb
