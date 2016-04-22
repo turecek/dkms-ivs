@@ -7,9 +7,9 @@ D:\Skola\2sem\IVS\projekt2\Calc\MathLibTest\obj\Debug\MathLibTest.dll
 D:\Skola\2sem\IVS\projekt2\Calc\MathLibTest\obj\Debug\MathLibTest.pdb
 D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLibTest\bin\Debug\MathLibTest.dll
 D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLibTest\bin\Debug\MathLibTest.pdb
+D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLibTest\obj\Debug\MathLibTest.dll
+D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLibTest\obj\Debug\MathLibTest.pdb
 D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLibTest\bin\Debug\MathLib.dll
 D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLibTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLibTest\bin\Debug\MathLib.pdb
 D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLibTest\obj\Debug\MathLibTest.csprojResolveAssemblyReference.cache
-D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLibTest\obj\Debug\MathLibTest.dll
-D:\Škola\dkms-ivs-master\dkms-ivs-master\MathLibTest\obj\Debug\MathLibTest.pdb
