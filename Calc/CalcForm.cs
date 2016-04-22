@@ -9,14 +9,37 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MathLibNS;
 
+/// 
+/// @file CalcForm.cs    
+/// @authors Dominik Tureček, Štěpán Vích, Monika Mužikovská, Katka Šmajzrová
+/// @brief Obsahuje funkce, které jsou navázány na eventy v GUI. Obsahuje i funkce zodpovědné za zobrazování výstupu kalkulačky a další pomocné funkce.
+/// @date Apr 2016
+/// @copyright GNU Public License. 
+///
+
+/// \defgroup guiFc GUI Class
+/// @brief Contain methods that are linked with GUI events.
+
+
+/// Prostor jmen grafického prostředí.
 namespace Calc
 {
+
+    
+    /// Třída obsahující metody, které se vážou na eventy v GUI, vypočítávájí výsledek a zobrazují ho.
     public partial class CalcForm : Form
     {
+
+
+        /// 
+        /// \addtogroup guiFc
+        /// @{
+        ///
+
         // Variables used as paramethers in methods from MathLibNS
-        double var1;
-        double var2;        
-        double result;
+        double var1; ///< Proměnná a předávaná jako parametr do matematické knihovny.
+        double var2; ///< Proměnná b předávaná jako parametr do matematické knihovny.       
+        double result; ///< Výsledek funkcí matematické knihovny.
         // String used for determining which operator was used
         string lastOp = "";
         // When bool op is true, textbox1 will clear after next numbered button is pressed
@@ -24,6 +47,8 @@ namespace Calc
         // When there is an error message in textbox1, bool error is true
         bool error = false;
 
+        /// @brief Konstruktor třídy
+        /// @return void
         public CalcForm()
         {
             InitializeComponent();
@@ -35,6 +60,10 @@ namespace Calc
         }
 
         // Method calls functions from MathLib depending on which operator was used
+        /// @brief Method calls functions from MathLib depending on which operator was used
+        /// @param[in] a Vstupní hodnota a
+        /// @param[in] b Vstupní hodnota b
+        /// @return void 
         public void LastOperation(double a, double b)
         {
             switch (lastOp)
@@ -86,8 +115,10 @@ namespace Calc
                     break;
             }
         }
-
+        
         // Method handling pressing of an operator button
+        /// @brief Method handling pressing of an operator button
+        /// @return void
         public void ButtonClick(string operation)
         {
             if (lastOp == "")
@@ -380,5 +411,8 @@ namespace Calc
                 textBox1.Text = textBox1.Text + ",";
             }
         }
+        /// 
+        /// @} Konec guiFc */
+        ///         
     }
 }

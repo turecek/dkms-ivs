@@ -2,13 +2,48 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MathLibNS;
 
+
+/// 
+/// @file MathLibTest.cs    
+/// @authors Dominik Tureček, Štěpán Vích, Monika Mužikovská, Katka Šmajzrová
+/// @brief Obsahuje jednotkové testy, pro funkce z matematické knihovny. Funkce využívají modul UnitTesting.
+/// @date Apr 2016
+/// @copyright GNU Public License. 
+///
+
+/// 
+/// \defgroup MathTest Math Library Unit Tests
+/// @brief Modul obsahující jednotkové testy pro matematickou knihovnu. 
+/// \defgroup retTest Return Value Test
+/// @brief Testy kontrolující správnost výstupu funkcí.
+/// \defgroup exceptTest Exception Throw Test
+/// @brief Testy kontrolující zda funkce vyvolávají vyjímky.
+///
+
+/// Prostor jmen testů matematické knihovny.
 namespace MathTestNS
 {
+    /// Třída obsahující jednotkové testy pro třídu MathLibNS::MathLib.
     [TestClass]
     public class MathTest
     {
+
+        /// 
+        /// \addtogroup MathTest
+        /// @{
+        ///
+
+
+        /// 
+        /// \addtogroup retTest
+        /// @{
+        ///
+
+
         // PLUS 
         // Tests if Plus method returns valid results
+        /// @brief Testuje funkci MathLib.Plus(), zda vraci spravne hodnoty.
+        /// @see MathLibNS#MathLib#Plus
         [TestMethod]
         public void Plus_Test()
         {
@@ -42,6 +77,8 @@ namespace MathTestNS
 
         // MINUS 
         // Tests if Minus method returns valid results
+        /// @brief Testuje funkci MathLib.Minus(), zda vraci spravne hodnoty.
+        /// @see MathLibNS#MathLib#Minus
         [TestMethod]
         public void Minus_Test()
         {
@@ -75,6 +112,8 @@ namespace MathTestNS
 
         // MULTIPLY
         // Tests if Multiply method returns valid results
+        /// @brief Testuje funkci MathLib.Multply(), zda vraci spravne hodnoty.
+        /// @see MathLibNS#MathLib#Multiply
         [TestMethod]
         public void Multiply_Test()
         {
@@ -108,6 +147,8 @@ namespace MathTestNS
 
         // DIVIDE
         // Tests if Divide method returns valid results
+        /// @brief Testuje funkci MathLib.Divide(), zda vraci spravne hodnoty.
+        /// @see MathLibNS#MathLib#Divide
         [TestMethod]
         public void Divide_Test()
         {
@@ -139,7 +180,19 @@ namespace MathTestNS
             Assert.AreEqual(expected4, result4, 1E-10, "Wrong output in Divide method.");
         }
 
+
+        /// 
+        /// @} Konec retTest */
+        ///   
+
+        /// 
+        /// \addtogroup exceptTest
+        /// @{
+        ///
+
         // Tests if Divide method throws an exception for b = 0
+        /// @brief Tests if Divide method throws an exception for b = 0.
+        /// @see MathLibNS#MathLib#Divide
         [TestMethod]
         [ExpectedException(typeof(Exception))]
         public void Divide_ByZero_ShouldThrowException()
@@ -154,8 +207,21 @@ namespace MathTestNS
             // assert is handled by ExpectedException
         }
 
+
+        /// 
+        /// @} Konec exceptTest */
+        /// 
+
+        /// 
+        /// \addtogroup retTest
+        /// @{
+        ///
+
+
         // FACTORIAL
         // Tests if Factorial method returns valid results
+        /// @brief Tests if Factorial method returns valid results.
+        /// @see MathLibNS#MathLib#Factorial
         [TestMethod]
         public void Factorial_ValidInputs()
         {
@@ -183,7 +249,20 @@ namespace MathTestNS
             Assert.AreEqual(expected4, result4, 0, "Wrong output for 10 factorial");
         }
 
+        /// 
+        /// @} Konec retTest */
+        ///   
+
+
+        /// 
+        /// \addtogroup exceptTest
+        /// @{
+        ///
+
+
         // Tests if factorial method throws an exception for input less than zero
+        /// @brief Tests if factorial method throws an exception for input less than zero.
+        /// @see MathLibNS#MathLib#Factorial
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Factorial_InputLessThanZero_ShouldThrowArgumentOutOfRange()
@@ -198,8 +277,21 @@ namespace MathTestNS
 
             // assert is handled by ExpectedException
         }
-				// POW
+
+        /// 
+        /// @} Konec exceptTest */
+        /// 
+
+
+        /// 
+        /// \addtogroup retTest
+        /// @{
+        ///
+
+		// POW
 		// Tests if Pow method returns valid results
+        /// @brief Tests if Pow method returns valid results.
+        /// @see MathLibNS#MathLib#Pow   
 		[TestMethod]
 		public void Pow_Test()
 		{
@@ -241,7 +333,19 @@ namespace MathTestNS
 			Assert.AreEqual(expected6, result6, 0, "Wrong output for Pow(-5, 6)");
 		}
 
+
+        /// 
+        /// @} Konec retTest */
+        ///   
+
+        /// 
+        /// \addtogroup exceptTest
+        /// @{
+        ///
+
 		// Tests if pow method throws an exception is second input is less or equal zero
+        /// @brief Tests if pow method throws an exception is second input is less or equal zero.
+        /// @see MathLibNS#MathLib#Pow   
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentOutOfRangeException))]
 		public void Pow_InputLEQZero_ShouldThrowArgumentOutOfRange()
@@ -259,8 +363,19 @@ namespace MathTestNS
 		// assert is handled by ExpectedException
 		}
 
+        /// 
+        /// @} Konec exceptTest */
+        /// 
+
+        /// 
+        /// \addtogroup retTest
+        /// @{
+        ///
+
 		// DecToBin
 		// Tests if DecToBin method returns valid results
+        /// @brief Tests if DecToBin method returns valid results.
+        /// @see MathLibNS#MathLib#DecToBin 
 		[TestMethod]
 		public void DecToBin_Test()
 		{
@@ -295,7 +410,19 @@ namespace MathTestNS
 			Assert.AreEqual(expected6, result6, 0, "Wrong output for DecToBin(0)");
 		}
 
+        /// 
+        /// @} Konec retTest */
+        ///    
+
+        /// 
+        /// \addtogroup exceptTest
+        /// @{
+        ///
+
+
 		// Tests if DecToBin method throws an exception is argument is less then zero
+        /// @brief Tests if DecToBin method throws an exception is argument is less then zero.
+        /// @see MathLibNS#MathLib#DecToBin 
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentOutOfRangeException))]
 		public void DecToBin_InputLessThenZero_ShouldThrowArgumentOutOfRange()
@@ -310,6 +437,16 @@ namespace MathTestNS
 
 			// assert is handled by ExpectedException
 		}
+
+
+        /// 
+        /// @} Konec exceptTest */
+        /// 
+
+        /// 
+        /// @} Konec MathTest */
+        ///
+
 
     }
 }

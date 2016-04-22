@@ -1,23 +1,76 @@
 ﻿using System;
 
+/// 
+/// @mainpage IVS - Kalkulačka
+/// @authors Dominik Tureček, Štěpán Vích, Monika Mužikovská, Katka Šmajzrová
+/// @brief Program napsaný v jazyce C# do předmětu IVS. Obsahuje grafické prostředí, které komunikuje s matematickou knihovnou a jednotkové testy. Celý projekt je řádně zdokumentován. 
+/// @version 1.0
+/// @copyright GNU Public License.
+/// @date Apr 2016
+/// 
+
+/// 
+/// @file MathLib.cs	
+/// @authors Dominik Tureček, Štěpán Vích, Monika Mužikovská, Katka Šmajzrová
+/// @brief Obsahuje základní matematické funkce jako sčítání, odčítání, násobení a dělení a navíc funkce faktoriálu, převodu na binární čísla a funkci mocniny. Všechny funkce jsou voláný především z GUI.
+/// @date Apr 2016
+/// @copyright GNU Public License. 
+///
+
+
+/// 
+/// \defgroup mathLib Math Library
+/// @brief Matematicka knihovna se zakladnimi a pokrocilymi matematickymi funkcemi. 
+/// \defgroup simpleOp Simple Math Operations
+/// @brief Jednoduché matematické operace, jako plus, mínus, násobení, dělení.
+/// \defgroup compOp Complicated Math Operations 
+/// @brief Složitější matematické operace jako faktoriál nebo převody do jiných soustav.
+
+/// Prostor jmen matematické knihovny.
 namespace MathLibNS
 {
+
+
+    /// Třída obsahující veřejné metody pro jednotlivé matematické operace.
     public class MathLib
     {
-        // Function Plus adds up two arguments.
+
+		/// 
+		/// \addtogroup mathLib
+		/// @{
+		///
+
+
+		/// 
+		/// \addtogroup simpleOp
+		/// @{
+		///
+
+        /// @brief Adds up two arguments.
+        /// @param[in] a Scitanec a
+        /// @param[in] b Scitanec b
+        /// @return a + b
+        // Function Plus adds up two arguments. 
         public static double Plus(double a, double b)
         {
             double result = a + b;
             return result;
         }
 
-        // Function Minus subtracts argument b from argument a.
+        /// @brief Subtracts argument b from argument a.
+        /// @param[in] a Mensenec
+        /// @param[in] b Mensitel
+        /// @return a - b
+        // Function Minus subtracts argument b from argument a. 
         public static double Minus(double a, double b)
         {
             double result = a - b;
             return result;
         }
-
+        /// @brief Multiplies two arguments.
+        /// @param[in] a Cinitel a
+        /// @param[in] b Cinitel b
+        /// @return a * b 
         // Function Multiply multiplies two arguments.
         public static double Multiply(double a, double b)
         {
@@ -25,6 +78,11 @@ namespace MathLibNS
             return result;
         }
 
+        /// @brief Divides argument a by argument b.
+        /// @param[in] a Delenec a
+        /// @param[in] b Delitel b
+        /// @pre b != 0
+        /// @return a / b 
         // Function Divide divides argument a by argument b.
         public static double Divide(double a, double b)
         {
@@ -36,7 +94,21 @@ namespace MathLibNS
             return result;
         }
 
-        // Function Factorial returns factorial of input.
+
+		/// 
+		/// @} Konec simpleOp */
+		///
+
+		/// 
+		/// \addtogroup compOp
+		/// @{
+		///
+
+        /// @brief Returns factorial of input.
+        /// @param[in] input Přirozené číslo
+        /// @pre input >= 0
+        /// @return !input
+        // Function Factorial returns factorial of input. 
         public static int Factorial(int input)
         {
             int result = 1;
@@ -60,7 +132,11 @@ namespace MathLibNS
             return result;
 
         }
-
+        /// @brief Counts argument a raised to the power b.
+        /// @param[in] a Základ mocniny
+        /// @param[in] b Exponent
+        /// @pre b > 0
+        /// @return a^b 
         // Function Pow counts argument a raised to the power b.
         public static double Pow(double a, int b)
         {
@@ -77,7 +153,10 @@ namespace MathLibNS
 
             return result;
         }
-
+        /// @brief Converts decimal argument a to binary result.
+        /// @param[in] a Číslo v decimálním tvaru.
+        /// @pre a >= 0
+        /// @return Binarni hodnota cisla.
         // Function DecToBin converts decimal argument a to binary result.
         public static long DecToBin(int a)
         {
@@ -105,5 +184,14 @@ namespace MathLibNS
                 return result;
             }
         }
+
+		/// 
+		/// @} Konec compOp */
+		///
+		/// 
+		/// @} Konec MathLib */
+		///
+
     }
+
 }
