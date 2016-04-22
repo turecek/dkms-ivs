@@ -42,7 +42,7 @@ namespace MathTestNS
 
         // PLUS 
         // Tests if Plus method returns valid results
-        /// @brief Testuje funkci MathLib.Plus(), zda vraci spravne hodnoty.
+        /// @brief Testuje funkci MathLib.Plus(), zda vrací správné hodnoty.
         /// @see MathLibNS#MathLib#Plus
         [TestMethod]
         public void Plus_Test()
@@ -77,7 +77,7 @@ namespace MathTestNS
 
         // MINUS 
         // Tests if Minus method returns valid results
-        /// @brief Testuje funkci MathLib.Minus(), zda vraci spravne hodnoty.
+        /// @brief Testuje funkci MathLib.Minus(), zda vrací správné hodnoty.
         /// @see MathLibNS#MathLib#Minus
         [TestMethod]
         public void Minus_Test()
@@ -112,7 +112,7 @@ namespace MathTestNS
 
         // MULTIPLY
         // Tests if Multiply method returns valid results
-        /// @brief Testuje funkci MathLib.Multply(), zda vraci spravne hodnoty.
+        /// @brief Testuje funkci MathLib.Multply(), zda vrací správné hodnoty.
         /// @see MathLibNS#MathLib#Multiply
         [TestMethod]
         public void Multiply_Test()
@@ -147,7 +147,7 @@ namespace MathTestNS
 
         // DIVIDE
         // Tests if Divide method returns valid results
-        /// @brief Testuje funkci MathLib.Divide(), zda vraci spravne hodnoty.
+        /// @brief Testuje funkci MathLib.Divide(), zda vrací správné hodnoty.
         /// @see MathLibNS#MathLib#Divide
         [TestMethod]
         public void Divide_Test()
@@ -191,7 +191,7 @@ namespace MathTestNS
         ///
 
         // Tests if Divide method throws an exception for b = 0
-        /// @brief Tests if Divide method throws an exception for b = 0.
+        /// @brief Testuje jestli funkce MathLib.Divide(), vyvolává vyjímku pro b = 0.
         /// @see MathLibNS#MathLib#Divide
         [TestMethod]
         [ExpectedException(typeof(Exception))]
@@ -220,7 +220,7 @@ namespace MathTestNS
 
         // FACTORIAL
         // Tests if Factorial method returns valid results
-        /// @brief Tests if Factorial method returns valid results.
+        /// @brief Testuje funkci MathLib.Factorial(), zda vrací správné hodnoty.
         /// @see MathLibNS#MathLib#Factorial
         [TestMethod]
         public void Factorial_ValidInputs()
@@ -261,7 +261,7 @@ namespace MathTestNS
 
 
         // Tests if factorial method throws an exception for input less than zero
-        /// @brief Tests if factorial method throws an exception for input less than zero.
+        /// @brief Testuje jestli funkce MathLib.Factorial(), vyvolává vyjímku pro input < 0.
         /// @see MathLibNS#MathLib#Factorial
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
@@ -290,7 +290,7 @@ namespace MathTestNS
 
 		// POW
 		// Tests if Pow method returns valid results
-        /// @brief Tests if Pow method returns valid results.
+        /// @brief Testuje funkci MathLib.Pow(), zda vrací správné hodnoty.
         /// @see MathLibNS#MathLib#Pow   
 		[TestMethod]
 		public void Pow_Test()
@@ -344,7 +344,7 @@ namespace MathTestNS
         ///
 
 		// Tests if pow method throws an exception is second input is less or equal zero
-        /// @brief Tests if pow method throws an exception is second input is less or equal zero.
+        /// @brief Testuje jestli funkce MathLib.Pow(), vyvolává vyjímku pokud je exponent <= 0.
         /// @see MathLibNS#MathLib#Pow   
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentOutOfRangeException))]
@@ -374,7 +374,7 @@ namespace MathTestNS
 
 		// DecToBin
 		// Tests if DecToBin method returns valid results
-        /// @brief Tests if DecToBin method returns valid results.
+        /// @brief Testuje funkci MathLib.DecToBin(), zda vrací správné hodnoty.
         /// @see MathLibNS#MathLib#DecToBin 
 		[TestMethod]
 		public void DecToBin_Test()
@@ -421,7 +421,7 @@ namespace MathTestNS
 
 
 		// Tests if DecToBin method throws an exception is argument is less then zero
-        /// @brief Tests if DecToBin method throws an exception is argument is less then zero.
+        /// @brief Testuje jestli funkce MathLib.Pow(), vyvolává vyjímku pokud je argumnet < 0.
         /// @see MathLibNS#MathLib#DecToBin 
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentOutOfRangeException))]

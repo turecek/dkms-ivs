@@ -18,7 +18,7 @@ using MathLibNS;
 ///
 
 /// \defgroup guiFc GUI Class
-/// @brief Contain methods that are linked with GUI events.
+/// @brief Obsahuje funkce, které jsou navázány na eventy v GUI.
 
 
 /// Prostor jmen grafického prostředí.
@@ -60,7 +60,7 @@ namespace Calc
         }
 
         // Method calls functions from MathLib depending on which operator was used
-        /// @brief Method calls functions from MathLib depending on which operator was used
+        /// @brief Metoda volá funkce z matematické knihovny v závislosti na použitém operandu.
         /// @param[in] a Vstupní hodnota a
         /// @param[in] b Vstupní hodnota b
         /// @return void 
@@ -117,7 +117,7 @@ namespace Calc
         }
         
         // Method handling pressing of an operator button
-        /// @brief Method handling pressing of an operator button
+        /// @brief Metoda spouštěná po zmáčknutí čudlíku v GUI.
         /// @return void
         public void ButtonClick(string operation)
         {

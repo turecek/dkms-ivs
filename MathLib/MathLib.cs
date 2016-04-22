@@ -1,7 +1,7 @@
 ﻿using System;
 
 /// 
-/// @mainpage IVS - Kalkulačka
+/// @mainpage IVS - Calculator
 /// @authors Dominik Tureček, Štěpán Vích, Monika Mužikovská, Katka Šmajzrová
 /// @brief Program napsaný v jazyce C# do předmětu IVS. Obsahuje grafické prostředí, které komunikuje s matematickou knihovnou a jednotkové testy. Celý projekt je řádně zdokumentován. 
 /// @version 1.0
@@ -20,7 +20,7 @@
 
 /// 
 /// \defgroup mathLib Math Library
-/// @brief Matematicka knihovna se zakladnimi a pokrocilymi matematickymi funkcemi. 
+/// @brief Matematická knihovna se zakladnimi a pokročilými matematickými funkcemi.
 /// \defgroup simpleOp Simple Math Operations
 /// @brief Jednoduché matematické operace, jako plus, mínus, násobení, dělení.
 /// \defgroup compOp Complicated Math Operations 
@@ -46,9 +46,9 @@ namespace MathLibNS
 		/// @{
 		///
 
-        /// @brief Adds up two arguments.
-        /// @param[in] a Scitanec a
-        /// @param[in] b Scitanec b
+        /// @brief Sečte oba argumenty.
+        /// @param[in] a Sčítanec a
+        /// @param[in] b Sčítanec b
         /// @return a + b
         // Function Plus adds up two arguments. 
         public static double Plus(double a, double b)
@@ -57,9 +57,9 @@ namespace MathLibNS
             return result;
         }
 
-        /// @brief Subtracts argument b from argument a.
-        /// @param[in] a Mensenec
-        /// @param[in] b Mensitel
+        /// @brief Odečte argument b od argumentu a.
+        /// @param[in] a Menšenec
+        /// @param[in] b Menšitel
         /// @return a - b
         // Function Minus subtracts argument b from argument a. 
         public static double Minus(double a, double b)
@@ -67,9 +67,9 @@ namespace MathLibNS
             double result = a - b;
             return result;
         }
-        /// @brief Multiplies two arguments.
-        /// @param[in] a Cinitel a
-        /// @param[in] b Cinitel b
+        /// @brief Vynásobí oba argumenty.
+        /// @param[in] a Činitel a
+        /// @param[in] b Činitel b
         /// @return a * b 
         // Function Multiply multiplies two arguments.
         public static double Multiply(double a, double b)
@@ -78,9 +78,9 @@ namespace MathLibNS
             return result;
         }
 
-        /// @brief Divides argument a by argument b.
-        /// @param[in] a Delenec a
-        /// @param[in] b Delitel b
+        /// @brief Vydělí argument a argumentem b.
+        /// @param[in] a Dělenec a
+        /// @param[in] b Dělitel b
         /// @pre b != 0
         /// @return a / b 
         // Function Divide divides argument a by argument b.
@@ -104,7 +104,7 @@ namespace MathLibNS
 		/// @{
 		///
 
-        /// @brief Returns factorial of input.
+        /// @brief Vrátí faktoriál parametru input.
         /// @param[in] input Přirozené číslo
         /// @pre input >= 0
         /// @return !input
@@ -132,7 +132,7 @@ namespace MathLibNS
             return result;
 
         }
-        /// @brief Counts argument a raised to the power b.
+        /// @brief Umocní argument a argumentem b.
         /// @param[in] a Základ mocniny
         /// @param[in] b Exponent
         /// @pre b > 0
@@ -153,10 +153,10 @@ namespace MathLibNS
 
             return result;
         }
-        /// @brief Converts decimal argument a to binary result.
+        /// @brief Převede decimální číslo na binární.
         /// @param[in] a Číslo v decimálním tvaru.
         /// @pre a >= 0
-        /// @return Binarni hodnota cisla.
+        /// @return Binárni hodnota čísla.
         // Function DecToBin converts decimal argument a to binary result.
         public static long DecToBin(int a)
         {
