@@ -456,6 +456,17 @@ namespace Calc
                 textBox1.Text = textBox1.Text + ",";
             }
         }
+
+        // Method changing a sign of number
+        private void button10_Click(object sender, EventArgs e)
+        {
+            double res;
+            if(double.TryParse(textBox1.Text, out res))
+            {
+                textBox1.Text = (res * (-1)).ToString();
+            }
+        }
+
         /// 
         /// @} Konec guiFc */
         ///         
