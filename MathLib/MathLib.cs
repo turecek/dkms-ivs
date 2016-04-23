@@ -107,7 +107,7 @@ namespace MathLibNS
         /// @brief Vrátí faktoriál parametru input.
         /// @param[in] input Přirozené číslo
         /// @pre input >= 0
-        /// @return !input
+        /// @return input!
         // Function Factorial returns factorial of input. 
         public static int Factorial(int input)
         {
@@ -135,14 +135,14 @@ namespace MathLibNS
         /// @brief Umocní argument a argumentem b.
         /// @param[in] a Základ mocniny
         /// @param[in] b Exponent
-        /// @pre b > 0
+        /// @pre b >= 0
         /// @return a^b 
         // Function Pow counts argument a raised to the power b.
         public static double Pow(double a, int b)
         {
             if (b < 0)
             {
-                throw new ArgumentOutOfRangeException("Exponent is less or equal zero.");
+                throw new ArgumentOutOfRangeException("Exponent is less than zero.");
             }
             double result = 1;
 
